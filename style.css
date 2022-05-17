@@ -1,0 +1,78 @@
+.main {
+    display: flex;
+    padding-top: 100px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.5;
+    align-items: center;
+}
+
+.left-top {
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+.buttonSuperior {
+    flex-grow: 0.7;
+}
+
+.buttons {
+    flex-grow: 0.3;
+}
+.left-bottom {
+    display:flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+.container {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.header {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.box {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+body {
+    background-color: #181818;
+    color: white
+}
+.row {
+    flex-grow: 1;
+    display: flex;
+    
+
+}
+.hover {
+    background-color:black;
+    flex-grow: 1;
+
+}
+.gridSquare {
+    flex-grow: 1;
+    background-color:white;
+}
+
+
