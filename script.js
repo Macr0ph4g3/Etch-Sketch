@@ -1,6 +1,7 @@
 
 window.addEventListener('load', (event) => {
     generateGrid(25);
+    drawBlack();
 })
 
 
@@ -27,24 +28,29 @@ function changeSize(value){
     
     if (value <= 200 && value >= 10){
         generateGrid(value);
-        draw();
-
     }  else {
-      let popup = prompt("That's a strange number, could you try something between 10 and 200?")
+      const popup = prompt("That's a strange number, could you try something between 10 and 200?")
       changeSize(popup);
-      draw();
     }
 }
 
-function draw(){
-    let blackCheck = document.getElementById("black").checked;
-    let colorCheck = document.getElementById("color").checked;
-    if (blackCheck == true) {
-        drawBlack();
-    }
-    if (colorCheck == true) {
+function draw(color){
+    console.log(color)
+switch (color) {
+    case 'black':
+        drawBlack()
+        break;
+    case 'color':
         drawColor();
-    }
+        break;
+    
+    case 'white':
+        erase();
+        break;
+        
+    default:
+        break;
+}
 }
 
 
@@ -62,9 +68,21 @@ function drawColor(){
     const container = document.querySelector('.container')
     const squares = container.querySelectorAll('div');
     for (let i = 0; i < squares.length; i++ ) {
-        let color = '#'+Math.random().toString(16).substr(2,6)
+        const color = '#'+Math.random().toString(16).substr(2,6)
         squares[i].addEventListener('mouseenter', function(event) {
             squares[i].style.backgroundColor = color;
         } )
     }
 }
+
+function erase(){
+    const container = document.querySelector('.container')
+    const squares = container.querySelectorAll('div');
+    for (let i = 0; i < squares.length; i++){
+        squares[i].addEventListener('mouseenter', function(event) {
+            squares[i].style.backgroundColor = "white";
+        } )
+}
+
+}
+

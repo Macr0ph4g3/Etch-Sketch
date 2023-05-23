@@ -9,25 +9,30 @@
 </head>
 <body>
     <div class="header">
-        Etch-A-Sketch
+        <div class="title">Etch-A-Sketch</div>
+        
     </div>
 <div class="main">
 
     <div class='left'>
         <div class="left-top">
             <div class="buttons">
-                <input type="radio" name="choice" id="black" value="black" checked>Black</input>
+                Black
+                <input type="button" name="choice" id="black" onclick="draw('black')"></input>
             </div>
             <div class="buttons">
-               <input type="radio" name="choice" id="color" value="color">Color</input>
+                Color
+               <input type="button" name="choice" id="color" onclick="draw('color')"></input>
             </div>    
-    </div>
-    <div class="buttonSuperior">
-        <button id="draw" onclick="draw()">Draw</button>
-    </div>
+             <div class="buttons">
+                White
+                <input type="button" name="choice" id="eraser" onclick="draw('white')"></input>
+            </div>
+
+         </div>
     
         <div class="left-bottom">
-            <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)") />
+            <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
             <button>Set Size</button>
         </div>
     </div>

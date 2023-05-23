@@ -1,29 +1,103 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
 .main {
     display: flex;
     padding-top: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .left {
     display: flex;
     flex-direction: column;
-    flex-grow: 0.5;
     align-items: center;
+    width: 15vw;
+    height: 35vh;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
 }
 
 .left-top {
     display:flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
 }
-.buttonSuperior {
-    flex-grow: 0.7;
-}
-
 .buttons {
-    flex-grow: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons input{
+    width: 100px;
+    height:50px;
+    border-radius: 15px;
+}
+#eraser{
+    background-color: white;
+}
+#color{
+    background: rgb(252,92,92);
+    background: linear-gradient(153deg, rgba(252,92,92,1) 0%, rgba(255,183,106,1) 15%, rgba(247,255,118,1) 30%, rgba(135,255,128,1) 45%, rgba(122,252,255,1) 60%, rgba(128,130,255,1) 75%, rgba(251,125,251,1) 90%, rgba(254,110,139,1) 100%);
+        }
+#black{
+    background-color: black
 }
 .left-bottom {
     display:flex;
@@ -44,10 +118,23 @@
 
 .header {
     display:flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 100px;
+    height: 3em;
+    width: 100%
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 15px;
+    color: black;
+
 }
 
 .box {
