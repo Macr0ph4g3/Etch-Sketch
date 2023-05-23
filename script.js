@@ -1,7 +1,6 @@
 
 window.addEventListener('load', (event) => {
     generateGrid(25);
-    drawBlack();
 })
 
 
@@ -12,7 +11,7 @@ function generateGrid(num){
     squares.forEach((div) => div.remove());
    
     for (let i = 0; i < (num); i++){
-        let row = document.createElement('div');
+        const row = document.createElement('div');
         row.className = 'row';
             for(let x = 0; x < num; x++){
                 let cell = document.createElement ('div');
@@ -20,19 +19,15 @@ function generateGrid(num){
                 row.appendChild(cell);
             }
         container.appendChild(row);
+}}
 
- }
- console.log(squares)
-}
-function changeSize(value){
-    
+
+function changeSize(){
+    const num = document.querySelector('#num')
+    const value =  num.value
     if (value <= 200 && value >= 10){
-        generateGrid(value);
-    }  else {
-      const popup = prompt("That's a strange number, could you try something between 10 and 200?")
-      changeSize(popup);
-    }
-}
+        return generateGrid(value);
+} }
 
 function draw(color){
     console.log(color)
@@ -60,7 +55,7 @@ function drawBlack(){
     for (let i = 0; i < squares.length; i++){
         squares[i].addEventListener('mouseenter', function(event) {
             squares[i].style.backgroundColor = "black";
-        } )
+         } )
 }
 }
 

@@ -32,8 +32,10 @@
          </div>
     
         <div class="left-bottom">
-            <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
-            <button>Set Size</button>
+        <form onsubmit="return false">
+            <input id="num" type="number" placeholder="Size" value="16" min="10" max="200">
+            <button class="changeSize" onclick="changeSize()">Set Size</button>
+        </form>
         </div>
     </div>
 

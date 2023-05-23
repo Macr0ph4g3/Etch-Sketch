@@ -162,4 +162,12 @@ body {
     background-color:white;
 }
 
+#num:invalid {
+    background-color: lightpink;
+}
 
+.changeSize {
+    height:25px;
+    border: none;
+    border-radius: 10px;
+}
